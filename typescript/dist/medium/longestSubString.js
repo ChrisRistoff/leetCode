@@ -1,4 +1,3 @@
-"use strict";
 // given a string s, find the length of the longest substring without repeating character
 function lengthOfLongestSubstring(s) {
     const charSet = new Set();
