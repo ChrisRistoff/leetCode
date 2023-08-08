@@ -12,7 +12,8 @@ function isItPalindrome(s) {
     newStr = strL.join("");
     let revStr = "";
     // reverse the string
-    for (let i = newStr.length - 1; i >= 0; i--) {
+    const length = newStr.length;
+    for (let i = length - 1; i >= 0; i--) {
         revStr += newStr[i];
     }
     return newStr === revStr;

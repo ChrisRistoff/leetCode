@@ -26,7 +26,8 @@ function longestCommonPrefix(strs: string[]): string {
     }
 
     // check if the char is the same for all strings in the array at the current index
-    for (let i = 1; i < strs.length; i++) {
+    const length = strs.length;
+    for (let i = 1; i < length; i++) {
       if (strs[i][index] !== char) {
         return prefix;
       }
@@ -46,7 +47,8 @@ function longestCommonPrefix2(strs: string[]): string {
 
   let prefix = strs[0];
 
-  for (let i = 1; i < strs.length; i++) {
+  const length = strs.length;
+  for (let i = 1; i < length; i++) {
     if (strs[i].indexOf(prefix) !== 0) {
       prefix = prefix.slice(0, prefix.length - 1);
       i--;

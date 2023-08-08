@@ -9,7 +9,8 @@ and you may not use the same element twice.
 function twoSum(nums: number[], target: number): number[] {
   const map = new Map<number, number>();
 
-  for (let i = 0; i < nums.length; i++) {
+  const length = nums.length;
+  for (let i = 0; i < length; i++) {
 
     const num = nums[i];
     const diff = target - num;

@@ -20,7 +20,8 @@ function maxProfit(prices: number[]): number {
   let max = prices[0];
   let profit = 0;
 
-  for (let i = 0; i < prices.length; i++) {
+  const length = prices.length;
+  for (let i = 0; i < length; i++) {
     map.set(prices[i], i);
 
     if (prices[i] < min) {
@@ -55,7 +56,8 @@ function maxProfit2(prices: number[]): number {
   let minPrice = prices[0];
   let maxProfit = 0;
 
-  for (let i = 1; i < prices.length; i++) {
+  const length = prices.length;
+  for (let i = 1; i < length; i++) {
     const currentPrice = prices[i];
 
     // Calculate the potential profit by selling at the current price

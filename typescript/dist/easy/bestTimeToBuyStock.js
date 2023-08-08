@@ -17,7 +17,8 @@ function maxProfit(prices) {
     let min = prices[0];
     let max = prices[0];
     let profit = 0;
-    for (let i = 0; i < prices.length; i++) {
+    const length = prices.length;
+    for (let i = 0; i < length; i++) {
         map.set(prices[i], i);
         if (prices[i] < min) {
             min = prices[i];
@@ -42,7 +43,8 @@ console.log(maxProfit([7, 6, 4, 3, 1])); // 0
 function maxProfit2(prices) {
     let minPrice = prices[0];
     let maxProfit = 0;
-    for (let i = 1; i < prices.length; i++) {
+    const length = prices.length;
+    for (let i = 1; i < length; i++) {
         const currentPrice = prices[i];
         // Calculate the potential profit by selling at the current price
         const potentialProfit = currentPrice - minPrice;
