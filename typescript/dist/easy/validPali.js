@@ -17,4 +17,4 @@ function isItPalindrome(s) {
     }
     return newStr === revStr;
 }
-console.log(isItPalindrome("A man, a plan, a canal: Panamas")); // true
+console.log(isItPalindrome("A man, a plan, a canal: Panama")); // true
