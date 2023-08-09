@@ -20,8 +20,8 @@ function longestPalindrome(s: string): string {
       }
     }
   }
-
 }
+
 
 function isPali(s: string): boolean {
   let i = 0;
@@ -46,22 +46,5 @@ console.log(longestPalindrome("ac"));
 console.log(longestPalindrome("bb"));
 console.log(longestPalindrome("ccc"));
 console.log(longestPalindrome("aaaa"));
-
-
-/*
-  let i = s.length;
-  let j = 0;
-
-  while (true) {
-    if (isPali(s.substring(j,i))) {
-      return s.substring(j, i);
-    }
-
-    i--;
-    j++;
-
-    if (i === 0) {
-      return s[0];
-    }
-  }
-*/
+console.log(longestPalindrome("abb"));
+console.log(longestPalindrome("bba"));
