@@ -29,7 +29,7 @@ function reverse(x) {
         reversed += string[i];
     }
     const revNum = parseInt(reversed);
-    if (revNum > Math.pow(2, 31) - 1 || revNum < Math.pow(-2, 31))
+    if (revNum > 2147483647 || revNum < -2147483648)
         return 0;
     return revNum;
 }
