@@ -13,32 +13,18 @@ Input: s = "abc", t = "ahbgdc"
 Output: true
 */
 function isSubsequence(s, t) {
-    let map = new Map();
-    for (let i = 0; i < t.length; i++) {
-        if (map.has(t[i])) {
-            map.get(t[i])[1] += 1;
+    let sIndex = 0;
+    let tIndex = 0;
+    while (tIndex < t.length) {
+        if (s[sIndex] === t[tIndex]) {
+            sIndex++;
+            if (sIndex === s.length) {
+                return true;
+            }
         }
-        else {
-            map.set(t[i], [i, 1]);
-        }
+        tIndex++;
     }
-    for (let i = 0; i < s.length; i++) {
-        if (!map.has(s[i])) {
-            return false;
-        }
-        let prev = map.get(s[i - 1]);
-        if (prev && prev[0] > map.get(s[i])[0]) {
-            return false;
-        }
-        let [index, count] = map.get(s[i]);
-        if (count === 1) {
-            map.delete(s[i]);
-        }
-        else {
-            map.set(s[i], [index, count - 1]);
-        }
-    }
-    return true;
+    return false;
 }
 ;
 console.log(isSubsequence("abc", "ahbgdc")); // true
