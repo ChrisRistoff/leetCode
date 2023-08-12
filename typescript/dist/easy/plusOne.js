@@ -28,6 +28,7 @@ function plusOne(digits) {
     return digits;
 }
 ;
+// time complexity: O(N)
 console.log(plusOne([9, 9, 9, 9]));
 console.log(plusOne([1, 2, 3]));
 console.log(plusOne([0]));
