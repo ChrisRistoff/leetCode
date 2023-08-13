@@ -6,7 +6,6 @@ As I delve deeper into the world of data structures and algorithms through vario
 
 ## **Difficulty-Based Folders:**
 Easy, Medium, & Hard: Problems are categorized based on their difficulty levels as defined by LeetCode. Each difficulty level has its dedicated folder, making it straightforward to navigate and find problems of a particular challenge level.
-Descriptive Solution Files:
 
 
 ## **Problem Statement:**

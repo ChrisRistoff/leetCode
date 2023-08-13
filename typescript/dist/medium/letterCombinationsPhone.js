@@ -42,6 +42,7 @@ function letterCombinations(digits) {
     }
     return result;
 }
+// time complexity: O(n^2 * m) I think...
 console.log(letterCombinations('23'));
 console.log(letterCombinations('2'));
 console.log(letterCombinations(''));

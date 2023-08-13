@@ -48,4 +48,5 @@ function removeElement(nums, val) {
     console.log(nums);
     return count;
 }
+// time complexity: O(n + n) => O(n)
 removeElement([3, 2, 2, 3], 3);

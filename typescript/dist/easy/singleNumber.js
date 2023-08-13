@@ -28,6 +28,7 @@ function singleNumber(nums) {
     }
     return Array.from(numSet)[0];
 }
+// time complexity: O(n + n) => O(n)
 console.log(singleNumber([2, 2, 1])); // 1
 console.log(singleNumber([4, 1, 2, 1, 2])); // 4
 console.log(singleNumber([1])); // 1
@@ -38,6 +39,7 @@ function singleNumber2(nums) {
     }
     return count;
 }
+// time complexity: O(n)
 console.log(singleNumber2([2, 2, 1])); // 1
 console.log(singleNumber2([4, 1, 2, 1, 2])); // 4
 console.log(singleNumber2([1])); // 1

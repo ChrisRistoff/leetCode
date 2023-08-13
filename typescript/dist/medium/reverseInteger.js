@@ -33,6 +33,7 @@ function reverse(x) {
         return 0;
     return revNum;
 }
+// time complexity: O(n)
 console.log(reverse(123));
 console.log(reverse(-123));
 console.log(reverse(120));

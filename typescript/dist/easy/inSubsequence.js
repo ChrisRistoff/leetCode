@@ -27,6 +27,7 @@ function isSubsequence(s, t) {
     return false;
 }
 ;
+// time complexity: O(n)
 console.log(isSubsequence("abc", "ahbgdc")); // true
 console.log(isSubsequence("axc", "ahbgdc")); // false
 console.log(isSubsequence("acb", "ahbgdc")); // false

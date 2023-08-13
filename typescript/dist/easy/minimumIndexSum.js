@@ -42,5 +42,6 @@ function findRestaurant(list1, list2) {
     return currentRestaurant;
 }
 ;
+// time complexity: O(n + n) => O(n)
 console.log(findRestaurant(["Shogun", "Tapioca Express", "Burger King", "KFC"], ["Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"]));
 console.log(findRestaurant(["S", "TEXP", "BK", "KFC"], ["KFC", "BK", "S"]));

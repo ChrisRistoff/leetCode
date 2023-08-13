@@ -29,6 +29,7 @@ function isAnagram(s, t) {
     return true;
 }
 ;
+// time complexity: O(n + m) where n is the length of s and m is the length of t
 console.log(isAnagram('anagram', 'nagaram'));
 console.log(isAnagram('rat', 'car'));
 console.log(isAnagram('a', 'ab'));

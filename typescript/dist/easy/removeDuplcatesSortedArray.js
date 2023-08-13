@@ -41,3 +41,4 @@ function removeDuplicates(nums) {
     }
     return i + 1;
 }
+// time complexity: O(n)

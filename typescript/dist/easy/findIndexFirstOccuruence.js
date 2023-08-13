@@ -21,6 +21,7 @@ function strStr(haystack, needle) {
     return -1;
 }
 ;
+// time complexity: O(n)
 console.log(strStr("sadbutsad", "sad")); // 0
 console.log(strStr("sadbutsad", "but")); // 3
 console.log(strStr("sadbutsad", "sadbut")); // 0

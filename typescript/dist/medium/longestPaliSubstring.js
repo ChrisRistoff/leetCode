@@ -32,6 +32,7 @@ function isPali(s) {
     }
     return true;
 }
+// time complexity: O(n^3)
 console.log(longestPalindrome("babad"));
 console.log(longestPalindrome("cbbd"));
 console.log(longestPalindrome("a"));

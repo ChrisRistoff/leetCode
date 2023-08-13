@@ -8,6 +8,7 @@ function isPalindrome(x) {
     }
     return reversed === str;
 }
+// time complexity: O(n)
 console.log(isPalindrome(121)); // true
 console.log(isPalindrome(-121)); // false
 console.log(isPalindrome(10)); // false

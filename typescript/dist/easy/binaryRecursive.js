@@ -28,5 +28,6 @@ function binary(nums, target, left, right) {
         return binary(nums, target, mid + 1, right);
     }
 }
+// time complexity: O(log n)
 console.log(search([-1, 0, 3, 5, 9, 12], 9)); // 4
 console.log(search([-1, 0, 3, 5, 9, 12], 2)); // -1

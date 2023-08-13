@@ -36,6 +36,7 @@ function isIsomorphic(s, t) {
     return true;
 }
 ;
+// time complexity: O(n)
 console.log(isIsomorphic('egg', 'add'));
 console.log(isIsomorphic('foo', 'bar'));
 console.log(isIsomorphic('paper', 'title'));
