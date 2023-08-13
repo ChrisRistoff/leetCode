@@ -39,4 +39,6 @@ function permutate(nums: number[]): number[][] {
   return result;
 }
 
+// time complexity: O(n factorial)
+
 console.log(permutate([1, 2, 3]));

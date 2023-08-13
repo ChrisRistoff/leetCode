@@ -26,6 +26,8 @@ function missingNumber(nums: number[]): number {
   return (nums.length * (nums.length + 1) / 2) - actualSum;
 };
 
+// time complexity: O(n)
+
 console.log(missingNumber([3, 0, 1])); // 2
 console.log(missingNumber([0, 1])); // 2
 
@@ -39,6 +41,8 @@ function missingNumber2(nums: number[]): number {
     }
   }
 };
+
+// time complexity: O(n)
 
 console.log(missingNumber2([3, 0, 1])); // 2
 console.log(missingNumber2([0, 1])); // 2

@@ -33,6 +33,8 @@ function wordBreak(s:string, wordDict: string[]): boolean {
   return dp[length];
 };
 
+// time complexity: O(n^2)
+
 console.log(wordBreak("leetcode", ["leet","code"]));
 console.log(wordBreak("applepenapple", ["apple","pen"]));
 console.log(wordBreak("catsandog", ["cats","dog","sand","and","cat"]));

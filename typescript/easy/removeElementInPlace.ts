@@ -54,4 +54,6 @@ function removeElement(nums: number[], val: number): number {
   return count;
 }
 
+// time complexity: O(n + n) => O(n)
+
 removeElement([3,2,2,3], 3)

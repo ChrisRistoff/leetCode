@@ -22,6 +22,8 @@ function isValid(s: string): boolean {
   return stack.length === 0;
 };
 
+// time complexity: O(n)
+
 console.log(isValid("()")); // true
 console.log(isValid("()[]{}")); // true
 console.log(isValid("(]")); // false

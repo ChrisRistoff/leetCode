@@ -47,5 +47,7 @@ function canPlaceFlowers(flowerbed: number[], n: number): boolean {
   return count >= n;
 };
 
+// time complexity: O(n)
+
 console.log(canPlaceFlowers([1, 0, 0, 0, 1], 1)); // true
 console.log(canPlaceFlowers([1, 0, 0, 0, 1], 2)); // false

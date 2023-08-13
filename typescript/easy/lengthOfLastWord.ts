@@ -33,6 +33,8 @@ function lengthOfLastWord(s: string): number {
   return wLen;
 };
 
+// time complexity: O(n)
+
 
 console.log(lengthOfLastWord("Hello World"));
 console.log(lengthOfLastWord("   fly me   to   the moon  "));

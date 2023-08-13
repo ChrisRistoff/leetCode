@@ -35,6 +35,8 @@ function climbStairs(n: number): number {
     return current;
 };
 
+// time complexity: O(n)
+
 console.log(climbStairs(2));
 console.log(climbStairs(3));
 console.log(climbStairs(4));

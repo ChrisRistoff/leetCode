@@ -42,6 +42,8 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   console.log(nums1);
 };
 
+// time complexity: O(n log n)
+
 console.log(merge([1,2,3,0,0,0], 3, [2,5,6], 3));
 console.log(merge([1], 1, [], 0));
 console.log(merge([-10,-3,-1,0,0,0], 3, [-1,1,1], 3));

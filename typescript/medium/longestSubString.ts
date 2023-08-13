@@ -25,6 +25,8 @@ function lengthOfLongestSubstring(s: string): number {
     return maxLength;
 }
 
+// time complexity: O(n)
+
 console.log(lengthOfLongestSubstring("abcabcbb")); // 3
 console.log(lengthOfLongestSubstring("bbbbb")); // 1
 console.log(lengthOfLongestSubstring("pwwkew")); // 3

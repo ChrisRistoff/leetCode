@@ -31,5 +31,7 @@ function binary(nums: number[], target: number, left: number, right: number): nu
   }
 }
 
+// time complexity: O(log n)
+
 console.log(search([-1, 0, 3, 5, 9, 12], 9)) // 4
 console.log(search([-1, 0, 3, 5, 9, 12], 2)) // -1

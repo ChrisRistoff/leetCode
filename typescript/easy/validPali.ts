@@ -24,4 +24,6 @@ function isItPalindrome(s: string): boolean {
   return newStr === revStr;
 }
 
+// time complexity: O(n)
+
 console.log(isItPalindrome("A man, a plan, a canal: Panama")); // true

@@ -35,5 +35,7 @@ function majorityElement(nums: number[]): number {
   return -1;
 };
 
+// time complexity: O(n + n) => O(n)
+
 console.log(majorityElement([3,2,3])) // 3
 console.log(majorityElement([2,2,1,1,1,2,2])) // 2

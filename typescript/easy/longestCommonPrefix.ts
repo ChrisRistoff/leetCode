@@ -39,6 +39,8 @@ function longestCommonPrefix(strs: string[]): string {
   }
 }
 
+// time complexity: O(n^2)
+
 console.log(longestCommonPrefix(["flower", "flow", "flight"]));
 console.log(longestCommonPrefix(["dog", "racecar", "car"]));
 
@@ -57,6 +59,8 @@ function longestCommonPrefix2(strs: string[]): string {
 
   return prefix;
 }
+
+// time complexity: O(n^2)
 
 console.log(longestCommonPrefix2(["flower", "flow", "flight"]));
 console.log(longestCommonPrefix2(["dog", "racecar", "car"]));

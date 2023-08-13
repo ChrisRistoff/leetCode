@@ -42,3 +42,5 @@ function removeDuplicates(nums: number[]): number {
     }
     return i + 1;
 }
+
+// time complexity: O(n)
