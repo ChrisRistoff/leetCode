@@ -1,4 +1,4 @@
-![][100.jpg]
+![](100.jpg)
 
 
 As I delve deeper into the world of data structures and algorithms through various courses, I'm challenging myself with LeetCode problems to apply what I've learned and refine my problem-solving skills. This repository is a testament to that journey, showcasing my solutions and the knowledge I've gained along the way. Feedback and suggestions are always welcome!
