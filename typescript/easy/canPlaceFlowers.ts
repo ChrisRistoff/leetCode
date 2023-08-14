@@ -21,7 +21,7 @@ function canPlaceFlowers(flowerbed: number[], n: number): boolean {
     count++;
   }
 
-  if (flowerbed[0] === 0 && flowerbed[1] === 0) {
+ if (flowerbed[0] === 0 && flowerbed[1] === 0) {
     count++;
     flowerbed[0] = 1;
   }
