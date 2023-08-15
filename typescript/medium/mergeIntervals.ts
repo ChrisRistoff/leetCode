@@ -33,6 +33,7 @@ function mergeInt(intervals: number[][]): number[][] {
     return mergedIntervals;
 };
 
+
 // time complexity: O(n log n) because of the sorting
 
 console.log(mergeInt([[1,3],[2,6],[8,10],[15,18]])) // [[1,6],[8,10],[15,18]]
