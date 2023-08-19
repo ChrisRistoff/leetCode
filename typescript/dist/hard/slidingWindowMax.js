@@ -22,12 +22,18 @@ Output: [1]
 */
 function maxSlidingWindow(nums, k) {
     let result = [];
-    for (let i = 0; i < nums.length - k + 1; i++) {
-        let max = Math.max(...nums.slice(i, i + k));
+    for (let i = k - 1; i < nums.length; i++) {
+        let max = nums[i];
+        for (let j = i - 1; j >= i - k + 1; j--) {
+            if (nums[j] > max) {
+                max = nums[j];
+            }
+        }
         result.push(max);
     }
     return result;
 }
 ;
+// time: O(nm)
 console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)); // [3,3,5,5,6,7]
 console.log(maxSlidingWindow([1], 1)); // [1]
