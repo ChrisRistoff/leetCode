@@ -36,4 +36,29 @@ function rotate(nums, k) {
 }
 ;
 // time complexity: O(n)
-console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3)); // [5,6,7,1,2,3,4]
+rotate([1, 2, 3, 4, 5, 6, 7], 3); // [5,6,7,1,2,3,4]
+rotate([-1, -100, 3, 99], 2); // [3,99,-1,-100]
+function rotate2(nums, k) {
+    let len = nums.length;
+    k = k % len;
+    let start = 0;
+    let count = 0;
+    while (count < len) {
+        let current = start;
+        let prev = nums[start];
+        while (true) {
+            const next = (current + k) % len;
+            const temp = nums[next];
+            nums[next] = prev;
+            prev = temp;
+            current = next;
+            count++;
+            if (start === current)
+                break;
+        }
+        start++;
+    }
+    console.log(nums);
+}
+rotate2([1, 2, 3, 4, 5, 6, 7], 3); // [5,6,7,1,2,3,4]
+console.log(rotate2([-1, -100, 3, 99], 2)); // [3,99,-1,-100]
