@@ -40,3 +40,12 @@ console.log(repeatedSubstringPattern('abab')); // true
 console.log(repeatedSubstringPattern('aba')); // false
 console.log(repeatedSubstringPattern('abcabcabcabc')); //true
 console.log(repeatedSubstringPattern('ababba')); // false
+// the faster solution
+function repeatedSubstringPattern2(s) {
+    return (s + s).slice(1, -1).includes(s);
+}
+// time complexity: O(n)
+console.log(repeatedSubstringPattern2('abab')); // true
+console.log(repeatedSubstringPattern2('aba')); // false
+console.log(repeatedSubstringPattern2('abcabcabcabc')); //true
+console.log(repeatedSubstringPattern2('ababba')); // false
