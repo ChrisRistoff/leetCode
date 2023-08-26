@@ -68,44 +68,62 @@ console.log(validPartition([803201,803201,803201,803201,803202,803203])) // true
 
 function validPartition2(nums: number[]): boolean {
   const n = nums.length;
-  if (n < 2) return false;  // Can't partition an array of size less than 2
+  if (n < 2) return false;
 
+  // dp[i] will be true if we can partition the subarray nums[0...i]
   const dp = new Array(n).fill(false);
 
+  // iterate over each number in the array to determine its partition validity
   for (let i = 0; i < n; i++) {
-    // Check for 2 consecutive equal numbers
-    if (i - 1 >= 0 && nums[i] === nums[i - 1]) {
 
+    // check for 2 consecutive equal numbers
+    if (i - 1 >= 0 && nums[i] === nums[i - 1]) {
+      // if the current and the previous numbers are the same it's a valid pair
+      // if there's no element before the pair then it's valid by default
       if (i - 2 < 0) {
         dp[i] = true;
       } else {
+        // we check if the subarray before this pair was valid
+        // if true the current subarray is also valid
         dp[i] = dp[i - 2];
       }
     }
 
-    // Check for 3 consecutive equal numbers
+    // check for 3 consecutive equal numbers
     if (!dp[i] && i - 2 >= 0 && nums[i] === nums[i - 1] && nums[i] === nums[i - 2]) {
+      // if the current previous and the one before previous numbers are the same
+      // it's a valid triplet
 
+      // if there's no element before the triplet then it's valid by default
       if (i - 3 < 0) {
         dp[i] = true;
       } else {
+        // we check if the subarray before this triplet was valid
+        // if yes then including this triplet the current subarray is also valid
         dp[i] = dp[i - 3];
       }
     }
 
     // Check for 3 consecutive increasing numbers
     if (!dp[i] && i - 2 >= 0 && nums[i - 2] + 1 === nums[i - 1] && nums[i - 2] + 2 === nums[i]) {
+      // if the difference between current and the previous two numbers is 1 and 2
+      // it's a valid increasing triplet
 
+      // if there's no element before the triplet then it's valid by default
       if (i - 3 < 0) {
         dp[i] = true;
       } else {
+        // we check if the subarray before this triplet was valid
+        // if yes the current subarray is also valid
         dp[i] = dp[i - 3];
       }
     }
   }
 
+  // if the entire array can be validly partitioned, dp[n - 1] will be true
   return dp[n - 1];
 }
+
 
 // time: O(n)
 
