@@ -23,34 +23,61 @@ Input: nums = [1,1,1,2]
 Output: false
 Explanation: There is no valid partition for this array.
 */
-function validPartition(nums) {
-    let len = nums.length;
-    let i = 0;
-    while (i < len) {
-        let current = nums[i];
-        let next = nums[i + 1];
-        let nextNext = nums[i + 2];
-        if (current === next && next === nextNext) {
-            i += 3;
-        }
-        else if (current === next) {
-            i += 2;
-        }
-        else if (current === next - 1 && next === nextNext - 2) {
-            i += 3;
-        }
-        else if (current === next + 1) {
-            i += 2;
-        }
-        else {
-            return false;
-        }
+function validPartition(nums, start = 0, memo = {}) {
+    if (start >= nums.length)
+        return true; // base case: if we've successfully partitioned the whole array
+    if (memo[start] !== undefined)
+        return memo[start];
+    // Check for two consecutive equal numbers
+    if (start + 1 < nums.length && nums[start] === nums[start + 1] && validPartition(nums, start + 2, memo)) {
+        memo[start] = true;
+        return true;
     }
-    return true;
+    // Check for three consecutive equal numbers
+    if (start + 2 < nums.length && nums[start] === nums[start + 1] && nums[start] === nums[start + 2] && validPartition(nums, start + 3, memo)) {
+        memo[start] = true;
+        return true;
+    }
+    // Check for three consecutive increasing numbers
+    if (start + 2 < nums.length && nums[start] + 1 === nums[start + 1] && nums[start] + 2 === nums[start + 2] && validPartition(nums, start + 3, memo)) {
+        memo[start] = true;
+        return true;
+    }
+    memo[start] = false;
+    return false;
 }
-;
+// time: O(n)
 console.log(validPartition([4, 4, 4, 5, 6])); // true
 console.log(validPartition([1, 1, 1, 2])); // false
-console.log(validPartition([1, 2, 3, 3, 3, 2, 1])); // true
 console.log(validPartition([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])); // true
 console.log(validPartition([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16])); // false
+console.log(validPartition([803201, 803201, 803201, 803201, 803202, 803203])); // true
+// faster solution
+function validPartition2(nums) {
+    let count = 0;
+    let prev = nums[0];
+    let curr = nums[0];
+    for (let i = 0; i < nums.length; i++) {
+        curr = nums[i];
+        if (curr === prev) {
+            count++;
+        }
+        else {
+            count = 1;
+        }
+        if (count === 3) {
+            return true;
+        }
+        if (i + 2 < nums.length && curr + 1 === nums[i + 1] && curr + 2 === nums[i + 2]) {
+            return true;
+        }
+        prev = curr;
+    }
+    return false;
+}
+// time: O(n)
+console.log(validPartition2([4, 4, 4, 5, 6])); // true
+console.log(validPartition2([1, 1, 1, 2])); // false
+console.log(validPartition2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])); // true
+console.log(validPartition2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16])); // false
+console.log(validPartition2([803201, 803201, 803201, 803201, 803202, 803203])); // true
