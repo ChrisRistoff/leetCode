@@ -52,30 +52,28 @@ console.log(validPartition([1, 1, 1, 2])); // false
 console.log(validPartition([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])); // true
 console.log(validPartition([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16])); // false
 console.log(validPartition([803201, 803201, 803201, 803201, 803202, 803203])); // true
-// faster solution
+// dynamic programming
 function validPartition2(nums) {
-    let count = 0;
-    let prev = nums[0];
-    let curr = nums[0];
-    for (let i = 0; i < nums.length; i++) {
-        curr = nums[i];
-        if (curr === prev) {
-            count++;
+    const n = nums.length;
+    if (n < 2)
+        return false; // Can't partition an array of size less than 2
+    const dp = new Array(n).fill(false);
+    for (let i = 0; i < n; i++) {
+        // Check for 2 consecutive equal numbers
+        if (i - 1 >= 0 && nums[i] === nums[i - 1]) {
+            dp[i] = i - 2 < 0 ? true : dp[i - 2];
         }
-        else {
-            count = 1;
+        // Check for 3 consecutive equal numbers
+        if (!dp[i] && i - 2 >= 0 && nums[i] === nums[i - 1] && nums[i] === nums[i - 2]) {
+            dp[i] = i - 3 < 0 ? true : dp[i - 3];
         }
-        if (count === 3) {
-            return true;
+        // Check for 3 consecutive increasing numbers
+        if (!dp[i] && i - 2 >= 0 && nums[i - 2] + 1 === nums[i - 1] && nums[i - 2] + 2 === nums[i]) {
+            dp[i] = i - 3 < 0 ? true : dp[i - 3];
         }
-        if (i + 2 < nums.length && curr + 1 === nums[i + 1] && curr + 2 === nums[i + 2]) {
-            return true;
-        }
-        prev = curr;
     }
-    return false;
+    return dp[n - 1];
 }
-// time: O(n)
 console.log(validPartition2([4, 4, 4, 5, 6])); // true
 console.log(validPartition2([1, 1, 1, 2])); // false
 console.log(validPartition2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])); // true
