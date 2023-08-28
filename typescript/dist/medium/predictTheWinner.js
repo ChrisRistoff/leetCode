@@ -34,15 +34,29 @@ so you need to return True representing player1 can win.
 */
 function predictTheWinner(nums) {
     const n = nums.length;
+    // 2D DP table where dp[i][j] will store the maximum relative score
+    // advantage player 1 has over player 2 for the subarray nums[i...j].
     const dp = Array.from({ length: n }, () => Array(n).fill(0));
+    // loop through the nums array in reverse to ensure that we have the answers
+    // for smaller subarrays before we try to solve for larger subarrays
     for (let i = n - 1; i >= 0; i--) {
+        // for a subarray of length 1 the score advantage of player 1 is simply the value of the number
         dp[i][i] = nums[i];
+        // arrays > length 1
         for (let j = i + 1; j < n; j++) {
+            // if player 1 picks nums[i] their advantage becomes nums[i] minus
+            // whatever advantage they would have if they started from i+1 (since Player 2 will make the next move)
+            // if Player 1 picks nums[j], their advantage is nums[j] minus
+            // the advantage from starting at index i and ending at j-1.
+            // player 1 will pick the option that maximizes their advantage.
             dp[i][j] = Math.max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1]);
         }
     }
+    // if the relative advantage of player 1 for the entire array (i.e., dp[0][n-1]) is non-negative
+    // player 1 can either win or tie the game.
     return dp[0][n - 1] >= 0;
 }
+// time: O(n^2)
 console.log(predictTheWinner([1, 5, 2])); // false
 console.log(predictTheWinner([1, 5, 233, 7])); // true
 console.log(predictTheWinner([1, 5, 2, 4, 6])); // true
