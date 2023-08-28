@@ -42,6 +42,20 @@ function minAbsoluteDifference(nums, x) {
     }
     return min;
 }
+// time: O(n^2)
 console.log(minAbsoluteDifference([4, 3, 2, 4], 2)); // 0
 console.log(minAbsoluteDifference([5, 3, 2, 10, 15], 1)); // 1
 console.log(minAbsoluteDifference([1, 2, 3, 4], 3)); // 3
+// faster solution
+function minAbsoluteDifference2(nums, x) {
+    nums.sort((a, b) => a - b);
+    let min = Infinity;
+    for (let i = 0; i < nums.length - x; i++) {
+        const difference = Math.abs(nums[i + x] - nums[i]);
+        min = Math.min(min, difference);
+    }
+    return min;
+}
+console.log(minAbsoluteDifference2([4, 3, 2, 4], 2)); // 0
+console.log(minAbsoluteDifference2([5, 3, 2, 10, 15], 1)); // 1
+console.log(minAbsoluteDifference2([1, 2, 3, 4], 3)); // 3
