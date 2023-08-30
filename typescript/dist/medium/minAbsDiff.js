@@ -46,16 +46,42 @@ function minAbsoluteDifference(nums, x) {
 console.log(minAbsoluteDifference([4, 3, 2, 4], 2)); // 0
 console.log(minAbsoluteDifference([5, 3, 2, 10, 15], 1)); // 1
 console.log(minAbsoluteDifference([1, 2, 3, 4], 3)); // 3
-// faster solution
 function minAbsoluteDifference2(nums, x) {
-    nums.sort((a, b) => a - b);
-    let min = Infinity;
-    for (let i = 0; i < nums.length - x; i++) {
-        const difference = Math.abs(nums[i + x] - nums[i]);
-        min = Math.min(min, difference);
+    const n = nums.length;
+    let ans = Infinity;
+    const sortedArray = [];
+    for (let i = 0; i + x < n; i++) {
+        let [leftValue, rightValue] = [nums[i], nums[i + x]];
+        let position = findPosition(sortedArray, leftValue);
+        sortedArray.splice(position, 0, leftValue); // Insert the number into the sorted position
+        let greaterOrEqualPos = findPosition(sortedArray, rightValue);
+        // If there's a number equal or greater than rightValue in the sortedArray
+        if (greaterOrEqualPos < sortedArray.length) {
+            ans = Math.min(ans, sortedArray[greaterOrEqualPos] - rightValue);
+        }
+        // If there's a number smaller than rightValue in the sortedArray
+        if (greaterOrEqualPos > 0) {
+            ans = Math.min(ans, rightValue - sortedArray[greaterOrEqualPos - 1]);
+        }
     }
-    return min;
+    return ans;
 }
+// Function to find the position of a number in a sorted array
+// Returns the position where the number can be inserted to maintain sorted order
+function findPosition(arr, target) {
+    let L = 0, R = arr.length;
+    while (L < R) {
+        let mid = (L + R) >> 1; // Bitwise shift for integer division by 2
+        if (arr[mid] < target) {
+            L = mid + 1;
+        }
+        else {
+            R = mid;
+        }
+    }
+    return L;
+}
+// time: O(n log n)
 console.log(minAbsoluteDifference2([4, 3, 2, 4], 2)); // 0
 console.log(minAbsoluteDifference2([5, 3, 2, 10, 15], 1)); // 1
 console.log(minAbsoluteDifference2([1, 2, 3, 4], 3)); // 3
