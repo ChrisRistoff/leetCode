@@ -26,8 +26,8 @@ function threeConsecutiveOdds(arr) {
 }
 ;
 // time: O(n)
-console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12])); // true
-console.log(threeConsecutiveOdds([2, 6, 4, 1])); // false
-console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])); // true
-console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])); // false
-console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])); // false
+console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12]));
+console.log(threeConsecutiveOdds([2, 6, 4, 1]));
+console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
+console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
+console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
