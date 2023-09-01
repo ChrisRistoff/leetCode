@@ -35,10 +35,10 @@ function waysToBuyPensPencils(total, cost1, cost2) {
 }
 ;
 // time: O(n)
-console.log(waysToBuyPensPencils(20, 10, 5)); // 9
-console.log(waysToBuyPensPencils(5, 10, 10)); // 1
-console.log(waysToBuyPensPencils(100, 10, 5)); // 121
-console.log(waysToBuyPensPencils(100, 10, 10)); // 10
-console.log(waysToBuyPensPencils(100, 5, 10)); // 121
-console.log(waysToBuyPensPencils(100, 5, 5)); // 121
-console.log(waysToBuyPensPencils(100, 1, 1)); // 10101
+console.log(waysToBuyPensPencils(20, 10, 5));
+console.log(waysToBuyPensPencils(5, 10, 10));
+console.log(waysToBuyPensPencils(100, 10, 5));
+console.log(waysToBuyPensPencils(100, 10, 10));
+console.log(waysToBuyPensPencils(100, 5, 10));
+console.log(waysToBuyPensPencils(100, 5, 5));
+console.log(waysToBuyPensPencils(100, 1, 1));
