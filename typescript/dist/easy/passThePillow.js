@@ -36,9 +36,9 @@ function passThePillow(n, time) {
 }
 ;
 // time: O(n)
-console.log(passThePillow(4, 5)); // 2
-console.log(passThePillow(3, 2)); // 3
-console.log(passThePillow(5, 10)); // 5
-console.log(passThePillow(6, 12)); // 4
-console.log(passThePillow(7, 15)); // 7
-console.log(passThePillow(8, 20)); // 4
+console.log(passThePillow(4, 5));
+console.log(passThePillow(3, 2));
+console.log(passThePillow(5, 10));
+console.log(passThePillow(6, 12));
+console.log(passThePillow(7, 15));
+console.log(passThePillow(8, 20));
