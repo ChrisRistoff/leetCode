@@ -35,7 +35,7 @@ function numJewelsInStones(jewels, stones) {
 }
 ;
 // time: O(n)
-console.log(numJewelsInStones("aA", "aAAbbbb")); // 3
-console.log(numJewelsInStones("z", "ZZ")); // 0
-console.log(numJewelsInStones("aA", "aAAbbbbaA")); // 6
-console.log(numJewelsInStones("aA", "aAAbbbbaAaA")); // 9
+console.log(numJewelsInStones("aA", "aAAbbbb"));
+console.log(numJewelsInStones("z", "ZZ"));
+console.log(numJewelsInStones("aA", "aAAbbbbaA"));
+console.log(numJewelsInStones("aA", "aAAbbbbaAaA"));
