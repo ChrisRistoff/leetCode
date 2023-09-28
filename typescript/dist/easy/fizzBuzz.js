@@ -21,7 +21,7 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 */
 function fizzBuzz(n) {
     let answer = [];
-    for (let i = 0; i < n + 1; i++) {
+    for (let i = 1; i < n + 1; i++) {
         let str = "";
         if (i % 3 === 0)
             str += "Fizz";
