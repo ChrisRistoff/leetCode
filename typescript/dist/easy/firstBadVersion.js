@@ -29,9 +29,6 @@ Output: 1
  *     ...
  * };
  */
-let isBadVersion = function (version) {
-    return version >= 5; // For demonstration, assuming versions 5 and above are bad.
-};
 var solution = function (isBadVersion) {
     return function (n) {
         // Here, you should pass isBadVersion directly
@@ -53,9 +50,7 @@ function firstBadVersion(n, isBadVersion) {
     return left;
 }
 ;
-console.log(solution(5)(4));
-console.log(solution(1)(1));
-console.log(solution(2126753390)(1702766719));
+// time complexity O(log n)
 /*
 var solution = function(isBadVersion: any) {
 
