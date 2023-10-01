@@ -41,6 +41,7 @@ function convertToTitle(columnNumber) {
     return result;
 }
 ;
+// time: O(log n)
 console.log(convertToTitle(1)); // A
 console.log(convertToTitle(28)); // AB
 console.log(convertToTitle(701)); // ZY
