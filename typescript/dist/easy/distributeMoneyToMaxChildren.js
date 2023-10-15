@@ -50,10 +50,11 @@ function distMoney(money, children) {
     return total;
 }
 ;
-// console.log(distMoney(20, 3)) // 1
-// console.log(distMoney(16, 2)) // 2
-// console.log(distMoney(1,2)) // -1
-// console.log(distMoney(13, 2)) // 1
-// console.log(distMoney(13, 3)) // 1
-// console.log(distMoney(17, 2))
+// time complexity: O(N)
+console.log(distMoney(20, 3)); // 1
+console.log(distMoney(16, 2)); // 2
+console.log(distMoney(1, 2)); // -1
+console.log(distMoney(13, 2)); // 1
+console.log(distMoney(13, 3)); // 1
+console.log(distMoney(17, 2)); // 1
 console.log(distMoney(23, 2)); // 1
