@@ -26,12 +26,12 @@ function countLargestGroup(n) {
         map.set(sum, (map.get(sum) + 1 || 1));
     }
     let max = 0;
-    for (let [key, value] of map) {
+    for (let value of map.values()) {
         if (max < value)
-            max = key;
+            max = value;
     }
     let result = 0;
-    for (let [key, value] of map) {
+    for (let key of map.keys()) {
         if (map.get(key) === max)
             result++;
     }
@@ -46,5 +46,6 @@ function sumOfDigits(num) {
     }
     return sum;
 }
+//time complexity: O(N*M)
 console.log(countLargestGroup(13));
 console.log(countLargestGroup(2));

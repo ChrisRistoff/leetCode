@@ -38,6 +38,7 @@ function reverseList(head: ListNode | null): ListNode | null {
 
   let curr = head
   let prev = null
+  //@ts-ignore
   let next: ListNode = null | null
 
   while (curr) {
