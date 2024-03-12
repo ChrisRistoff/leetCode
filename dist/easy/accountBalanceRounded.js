@@ -1,3 +1,4 @@
+"use strict";
 /*
 Initially, you have a bank account balance of 100 dollars.
 
@@ -30,6 +31,8 @@ Explanation: In this example, there are two nearest multiples of 10 to 15: 10 an
 So, the larger multiple, 20, is chosen.
 Hence, your account balance becomes 100 - 20 = 80.
 */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.accountBalanceAfterPurchase = void 0;
 function accountBalanceAfterPurchase(purchaseAmount) {
     let change = 100 - purchaseAmount;
     if (change % 5 === 0) {
@@ -37,9 +40,6 @@ function accountBalanceAfterPurchase(purchaseAmount) {
     }
     return Math.round(change / 10) * 10;
 }
+exports.accountBalanceAfterPurchase = accountBalanceAfterPurchase;
 ;
 // time: O(1)
-console.log(accountBalanceAfterPurchase(9));
-console.log(accountBalanceAfterPurchase(15));
-console.log(accountBalanceAfterPurchase(17));
-console.log(accountBalanceAfterPurchase(20));

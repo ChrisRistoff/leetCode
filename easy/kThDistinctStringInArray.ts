@@ -30,6 +30,7 @@ The only distinct string is "b".
 Since there are fewer than 3 distinct strings, we return an empty string "".
 */
 
+
 function kthDistinct(arr: string[], k: number): string {
   let map = new Map()
 
@@ -37,11 +38,11 @@ function kthDistinct(arr: string[], k: number): string {
     map.set(s, (map.get(s)+1) || 1)
   }
 
-  let index = 0
-  for(let [key, val] of map.entries()) {
-    if(val === 1) index++
 
-    if (index === k) return key
+  for(let [key, val] of map.entries()) {
+    if(val === 1) k--
+
+    if (k === 0) return key
   }
 
   return ""

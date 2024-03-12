@@ -31,7 +31,7 @@ So, the larger multiple, 20, is chosen.
 Hence, your account balance becomes 100 - 20 = 80.
 */
 
-function accountBalanceAfterPurchase(purchaseAmount: number): number {
+export function accountBalanceAfterPurchase(purchaseAmount: number): number {
   let change = 100-purchaseAmount
   if (change%5===0) {
     change--
@@ -40,8 +40,3 @@ function accountBalanceAfterPurchase(purchaseAmount: number): number {
 };
 
 // time: O(1)
-
-console.log(accountBalanceAfterPurchase(9))
-console.log(accountBalanceAfterPurchase(15))
-console.log(accountBalanceAfterPurchase(17))
-console.log(accountBalanceAfterPurchase(20))

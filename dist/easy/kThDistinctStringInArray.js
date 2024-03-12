@@ -34,11 +34,10 @@ function kthDistinct(arr, k) {
     for (let s of arr) {
         map.set(s, (map.get(s) + 1) || 1);
     }
-    let index = 0;
     for (let [key, val] of map.entries()) {
         if (val === 1)
-            index++;
-        if (index === k)
+            k--;
+        if (k === 0)
             return key;
     }
     return "";

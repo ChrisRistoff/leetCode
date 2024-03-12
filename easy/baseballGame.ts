@@ -49,7 +49,7 @@ Explanation:
 Since the record is empty, the total sum is 0.
 */
 
-function calPoints(ops: string[]): number {
+export function calPoints(ops: string[]): number {
 
   let score = 0;
   let lastRound = [];
@@ -82,7 +82,3 @@ function calPoints(ops: string[]): number {
 };
 
 // time: O(n)
-
-console.log(calPoints(["5", "2", "C", "D", "+"]));
-console.log(calPoints(["5","-2","4","C","D","9","+","+"]));
-console.log(calPoints(["1", "C"]));

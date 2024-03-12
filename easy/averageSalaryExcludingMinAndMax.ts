@@ -19,7 +19,7 @@ Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 */
 
-function average(salary: number[]): number {
+export function average(salary: number[]): number {
   const min = Math.min(...salary)
   const max = Math.max(...salary)
   let all = 0
@@ -35,10 +35,3 @@ function average(salary: number[]): number {
 };
 
 // time: O(n)
-
-console.log(average([4000, 3000, 1000, 2000]))
-console.log(average([1000, 2000, 3000]))
-console.log(average([6000, 5000, 4000, 3000, 2000, 1000]))
-console.log(average([8000, 9000, 2000, 3000, 6000, 1000]))
-console.log(average([8000, 9000, 2000, 3000, 6000, 1000, 5000]))
-console.log(average([8000, 9000, 2000, 3000, 6000, 1000, 5000, 4000]))
