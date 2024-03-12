@@ -2,17 +2,21 @@ import { accountBalanceAfterPurchase } from '../../easy/accountBalanceRounded';
 
 describe('accountBalanceAfterPurchase', () => {
   it('should return the account balance after purchase', () => {
-    expect(accountBalanceAfterPurchase(100)).toBe(50);
+    expect(accountBalanceAfterPurchase(9)).toBe(90);
   });
-  it('should return the account balance after purchase', () => {
-    expect(accountBalanceAfterPurchase(200)).toBe(100);
-  });
-
-  it('should return the account balance after purchase', () => {
-    expect(accountBalanceAfterPurchase(300)).toBe(150);
+  it('should return the account balaace after purchase', () => {
+    expect(accountBalanceAfterPurchase(12)).toBe(90);
   });
 
   it('should return the account balance after purchase', () => {
-    expect(accountBalanceAfterPurchase(400)).toBe(200);
+    expect(accountBalanceAfterPurchase(15)).toBe(80);
+  });
+
+  it('should return the account balance after purchase', () => {
+    expect(accountBalanceAfterPurchase(17)).toBe(80);
+  });
+
+  it('should return the account balance after purchase', () => {
+    expect(accountBalanceAfterPurchase(20)).toBe(80);
   });
 });

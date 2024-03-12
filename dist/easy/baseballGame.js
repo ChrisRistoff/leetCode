@@ -1,3 +1,4 @@
+"use strict";
 /*
 You are keeping the scores for a baseball game with strange rules.
 At the beginning of the game, you start with an empty record.
@@ -48,6 +49,10 @@ Explanation:
 "C" - Invalidate and remove the previous score, record is now [].
 Since the record is empty, the total sum is 0.
 */
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.calPoints = void 0;
+
 function calPoints(ops) {
     let score = 0;
     let lastRound = [];
@@ -72,8 +77,7 @@ function calPoints(ops) {
     }
     return score;
 }
+
+exports.calPoints = calPoints;
 ;
 // time: O(n)
-console.log(calPoints(["5", "2", "C", "D", "+"]));
-console.log(calPoints(["5", "-2", "4", "C", "D", "9", "+", "+"]));
-console.log(calPoints(["1", "C"]));

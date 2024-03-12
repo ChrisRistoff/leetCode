@@ -40,8 +40,3 @@ export function accountBalanceAfterPurchase(purchaseAmount: number): number {
 };
 
 // time: O(1)
-
-console.log(accountBalanceAfterPurchase(9))
-console.log(accountBalanceAfterPurchase(15))
-console.log(accountBalanceAfterPurchase(17))
-console.log(accountBalanceAfterPurchase(20))

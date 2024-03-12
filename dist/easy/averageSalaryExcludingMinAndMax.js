@@ -1,3 +1,4 @@
+"use strict";
 /*
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 
@@ -18,6 +19,9 @@ Explanation: Minimum salary and maximum salary are 1000 and 3000 respectively.
 Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.average = void 0;
+
 function average(salary) {
     const min = Math.min(...salary);
     const max = Math.max(...salary);
@@ -29,11 +33,7 @@ function average(salary) {
     }
     return all / (salary.length - 2);
 }
-;
+
+exports.average = average;
+
 // time: O(n)
-console.log(average([4000, 3000, 1000, 2000]));
-console.log(average([1000, 2000, 3000]));
-console.log(average([6000, 5000, 4000, 3000, 2000, 1000]));
-console.log(average([8000, 9000, 2000, 3000, 6000, 1000]));
-console.log(average([8000, 9000, 2000, 3000, 6000, 1000, 5000]));
-console.log(average([8000, 9000, 2000, 3000, 6000, 1000, 5000, 4000]));

@@ -43,7 +43,3 @@ function accountBalanceAfterPurchase(purchaseAmount) {
 exports.accountBalanceAfterPurchase = accountBalanceAfterPurchase;
 ;
 // time: O(1)
-console.log(accountBalanceAfterPurchase(9));
-console.log(accountBalanceAfterPurchase(15));
-console.log(accountBalanceAfterPurchase(17));
-console.log(accountBalanceAfterPurchase(20));
