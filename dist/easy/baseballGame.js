@@ -49,8 +49,10 @@ Explanation:
 "C" - Invalidate and remove the previous score, record is now [].
 Since the record is empty, the total sum is 0.
 */
+
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calPoints = void 0;
+
 function calPoints(ops) {
     let score = 0;
     let lastRound = [];
@@ -75,6 +77,7 @@ function calPoints(ops) {
     }
     return score;
 }
+
 exports.calPoints = calPoints;
 ;
 // time: O(n)

@@ -4,7 +4,7 @@ describe('accountBalanceAfterPurchase', () => {
   it('should return the account balance after purchase', () => {
     expect(accountBalanceAfterPurchase(9)).toBe(90);
   });
-  it('should return the account balance after purchase', () => {
+  it('should return the account balaace after purchase', () => {
     expect(accountBalanceAfterPurchase(12)).toBe(90);
   });
 

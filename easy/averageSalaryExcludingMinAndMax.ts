@@ -20,6 +20,7 @@ You are given an array of unique integers salary where salary[i] is the salary o
 */
 
 export function average(salary: number[]): number {
+
   const min = Math.min(...salary)
   const max = Math.max(...salary)
   let all = 0
