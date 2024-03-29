@@ -21,7 +21,6 @@ You are given an array of unique integers salary where salary[i] is the salary o
 */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.average = void 0;
-
 function average(salary) {
     const min = Math.min(...salary);
     const max = Math.max(...salary);
@@ -33,7 +32,6 @@ function average(salary) {
     }
     return all / (salary.length - 2);
 }
-
 exports.average = average;
-
+;
 // time: O(n)

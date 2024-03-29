@@ -14,7 +14,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 */
 
 
-function maxProfit(prices: number[]): number {
+export function maxProfit(prices: number[]): number {
   const map = new Map<number, number>();
   let min = prices[0];
   let max = prices[0];
@@ -48,12 +48,9 @@ function maxProfit(prices: number[]): number {
 }
 // time complexity: O(n)
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 5
-console.log(maxProfit([7, 6, 4, 3, 1])); // 0
-
 
 // faster solution
-function maxProfit2(prices: number[]): number {
+export function maxProfit2(prices: number[]): number {
   let minPrice = prices[0];
   let maxProfit = 0;
 
@@ -78,6 +75,3 @@ function maxProfit2(prices: number[]): number {
   return maxProfit;
 }
 // time complexity: O(n)
-
-console.log(maxProfit2([7, 1, 5, 3, 6, 4])); // 5
-console.log(maxProfit2([7, 6, 4, 3, 1])); // 0

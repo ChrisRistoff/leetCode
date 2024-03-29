@@ -1,3 +1,4 @@
+"use strict";
 /*
 You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
@@ -12,6 +13,8 @@ Output: 5
 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.maxProfit2 = exports.maxProfit = void 0;
 function maxProfit(prices) {
     const map = new Map();
     let min = prices[0];
@@ -37,9 +40,8 @@ function maxProfit(prices) {
     }
     return profit;
 }
+exports.maxProfit = maxProfit;
 // time complexity: O(n)
-console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 5
-console.log(maxProfit([7, 6, 4, 3, 1])); // 0
 // faster solution
 function maxProfit2(prices) {
     let minPrice = prices[0];
@@ -60,6 +62,5 @@ function maxProfit2(prices) {
     }
     return maxProfit;
 }
+exports.maxProfit2 = maxProfit2;
 // time complexity: O(n)
-console.log(maxProfit2([7, 1, 5, 3, 6, 4])); // 5
-console.log(maxProfit2([7, 6, 4, 3, 1])); // 0
